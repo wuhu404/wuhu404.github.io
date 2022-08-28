@@ -16,12 +16,11 @@ html,body{
 
 </head>
 <body>
-<audio 
-autoplay="autoplay" 
-loop="loop" 
-preload="auto"
-src="../祝你生日快乐.mp3">
+<audio controls autoplay="autoplay" loop="loop" style="display:none;">
+<source src="../祝你生日快乐.mp3" type="audio/mpeg" />
+  如果不播放，说明你的浏览器不支持！
 </audio>
+
 <canvas id="canvas" style="position:absolute;width:100%;height:100%;z-index:8888"></canvas>
 <canvas style="position:absolute;width:100%;height:100%;z-index:9999" class="canvas" ></canvas>
 <div class="overlay">

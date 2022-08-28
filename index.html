@@ -5,45 +5,94 @@
 <link rel="stylesheet" href="登录界面.css">
     <style type="text/css">
 		body{
-			background:#000;
+			background-color:grey;
+			height: 100vh;
+			background-size: cover;
+			display: flex;
+			position: relative;
+			justify-content: center;
+			align-items: center;
 		}
-		.text{
-			text-align:center;
+		.login{
+			width: 350px;
+			height: 350px;
+			border-top: 1px solid rgba(255,255,255,0.5);
+			border-left: 1px solid rgba(255,255,255,0.5);
+			border-bottom: 1px solid rgba(255,255,255,0.3);
+			border-right: 1px solid rgba(255,255,255,0.3);
+			backdrop-filter: blur(10px);
+			background: rgba(50,50,50,0.2);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
 		}
-		input{
+		.login .text{
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+
+		}
+		.login .text input{
+			width:200px;
+			
+			height:35px;
 			margin:0 auto;
+			
 			border-radius: 8px;
+
 		}
+
         h1{
 			color:white;
             text-align: center;
 
     　　}
-		.btn{
-			text-align:center;
+		.login .btn{
+			
+			justify-content: center;
+			align-items: center;
+
 		}
 		button{
-			margin:60px 0px 0px 0px;
+			width:100px;
+			background-color: white;
+			height:40px;
 			border-radius: 8px;
-		}
-		p{
-			color:white;
-			text-align:center;
+			font-size: 24px;
 			
 		}
+		.prompt{
+			padding-top: 60px;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.login {
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+		}
+ 
 
 
     </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 </head>
 <body>
 <div class="login">
-<h1>请输入四位数</h1>
+<div class="prompt">
+	<h1>请输入四位数</h1>
+</div>
 <div class="text">
 <i class="fa fa-lock" aria-hidden="true"></i><!-- Font Awesome -->
 <input type="password" placeholder="Password" id="pass">
 </div>
 <div class="btn">
-<button style="margin:0 auto;" onclick="login()">登录</button>
+<button style="margin:0 auto;" onclick="login()">解锁</button>
 </div>
 </div>
 
@@ -53,7 +102,6 @@ function login(){
 
 var password = document.getElementById("pass").value;
 if(password=="0803"){
-alert("密码正确！");
 window.location.href = "info.html";
 return false;
 }
