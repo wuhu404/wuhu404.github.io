@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录界面</title>
+<link rel="stylesheet" href="登录界面.css">
+    <style type="text/css">
+		body{
+			background:#000;
+		}
+		.text{
+			text-align:center;
+		}
+		input{
+			margin:0 auto;
+			border-radius: 8px;
+		}
+        h1{
+			color:white;
+            text-align: center;
+
+    　　}
+		.btn{
+			text-align:center;
+		}
+		button{
+			margin:60px 0px 0px 0px;
+			border-radius: 8px;
+		}
+		p{
+			color:white;
+			text-align:center;
+			
+		}
+
+
+    </style>
+</head>
+<body>
+<div class="login">
+<h1>请输入四位数</h1>
+<div class="text">
+<i class="fa fa-lock" aria-hidden="true"></i><!-- Font Awesome -->
+<input type="password" placeholder="Password" id="pass">
+</div>
+<div class="btn">
+<button style="margin:0 auto;" onclick="login()">登录</button>
+</div>
+</div>
+
+</body>
+<script type="text/javascript">
+function login(){
+
+var password = document.getElementById("pass").value;
+if(password=="0803"){
+alert("密码正确！");
+window.location.href = "info.html";
+return false;
+}
+else{
+alert("密码错误！");
+window.location.href= "index.html";
+return false;
+}
+}
+</script>
+</html>
